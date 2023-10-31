@@ -1,37 +1,89 @@
-from typing import NamedTuple
-
 import googlemaps
 import pandas as pd
 
-class Coordinate(NamedTuple):
-    name: str
-    longitude: float
-    latitude: float
-
 gmaps = googlemaps.Client(key='AIzaSyAyZ5x-tm9dSJc2Xk4iS5A1Amh2jGQi8DM')
+
+hub_addresses = []
+with open("data/mobility_hub_addresses.txt") as file:
+    lines = file.readlines()
+    hub_addresses = [line.replace("\n", "") + " Amsterdam" for line in lines]
+
+train_stations = []
+with open("data/train_stations.txt") as file:
+    lines = file.readlines()
+    train_stations = [line.replace("\n", "") for line in lines]
 
 metro_tram_df = pd.read_csv("data/TRAMMETRO_PUNTEN_2022.csv", sep=";")
 metro_df = metro_tram_df.loc[metro_tram_df["Modaliteit"] == "Metro"]
 tram_df = metro_tram_df.loc[metro_tram_df["Modaliteit"] == "Tram"]
 
-
 metro_coordinates = [
-    Coordinate(name="", longitude=row["LNG"], latitude=row["LAT"])
+    [row["LNG"], row["LAT"]]
     for _, row in metro_df.iterrows()
 ]
 
-for index, row in metro_df.iterrows():
-    metro_coordinate = [row["LNG"], row["LAT"]]
-    metro_coordinates.append(metro_coordinate)
+df_hubs_data = pd.DataFrame({"Mobility hub": hub_addresses})
 
+def find_nearest_from_destination_list(hub, destinations, mode, test=False):
+    nearest_destination = ""
+    distance_to_nearest = 999999999
+    for destination in destinations:
+        directions = gmaps.directions(hub, destination, mode=mode)
+        distance = directions[0]["legs"][0]["distance"]["value"]
+        if distance < distance_to_nearest:
+            distance_to_nearest = distance
+            nearest_destination = destination
+    return {
+        "name": nearest_destination,
+        "distance": distance_to_nearest
+    }
 
-origins = ["Amsterdam", "Utrecht"]
-destinations = ["Rotterdam", "The Hague"]
+nearest_stations = {
+    "walking": [
+        find_nearest_from_destination_list(hub, train_stations, "walking")
+        for hub in hub_addresses
+    ],
+    "biking": [
+        find_nearest_from_destination_list(hub, train_stations, "bicycling")
+        for hub in hub_addresses
+    ]
+}
 
-distance_matrix_driving = gmaps.distance_matrix(origins, destinations)
-# print(metro_coordinates)
-# print(distance_matrix_driving)
+df_hubs_data["Nearest station (walking)"] = [
+    station["name"] for station in nearest_stations["walking"]
+    ]
+df_hubs_data["Distance to nearest train station (walking)"] = [
+    station["distance"] for station in nearest_stations["walking"]
+]
+df_hubs_data["Nearest station (biking)"] = [
+    station["name"] for station in nearest_stations["biking"]
+]
+df_hubs_data["Distance to nearest train station (biking)"] = [
+    station["distance"] for station in nearest_stations["biking"]
+]
 
-for row in distance_matrix_driving["rows"]:
-    for element in row["elements"]:
-        print(element["distance"])
+df_hubs_data.to_csv("results/mobility_hub_google_maps_data.csv")
+
+'''
+The result should be dataset with each mobility hub per row and some new observations
+derived from this per column.
+
+Likely relevant, achievable data:
+- distance to the nearest train station
+- distance to nearest tram/metro/bus point (separately)
+- distance to nearest other mobility hub
+- 
+
+Other ideas (harder to get):
+- distance to nearest "shopping centre"
+- aggregation of residences in area
+- aggregation of restaurants and shops in area 
+- traffic in the area
+- distance to nearest park
+- distance to A10
+- distance to parking lot
+- distance to landmarks
+- distance to university
+- 
+
+'''
