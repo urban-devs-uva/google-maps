@@ -3,20 +3,30 @@ import pandas as pd
 import itertools
 
 gmaps = googlemaps.Client(key="AIzaSyAyZ5x-tm9dSJc2Xk4iS5A1Amh2jGQi8DM")
+gmaps_matrix_size_limit = 10
+
+
+def batch_for_gmaps(data):
+    if len(data) <= gmaps_matrix_size_limit:
+        return data
+    batched_data = []
+    it = iter(data)
+    while batch := list(itertools.islice(it, gmaps_matrix_size_limit)):
+        batched_data.append(batch)
+    return batched_data
+
 
 hub_addresses = []
 with open("data/mobility_hub_addresses.txt") as file:
     lines = file.readlines()
-    hub_addresses = [line.replace("\n", "") + " Amsterdam" for line in lines]
-
-hubs_batches = itertools.batched(hub_addresses, 10)
+    hub_addresses = [f'{line.replace("\n", "")} Amsterdam' for line in lines]
+hubs_batches = batch_for_gmaps(hub_addresses)
 
 train_stations = []
 with open("data/train_stations.txt") as file:
     lines = file.readlines()
     train_stations = [line.replace("\n", "") for line in lines]
-
-train_stations_batches = itertools.batched(train_stations, 10)
+train_stations_batches = batch_for_gmaps(train_stations)
 
 metro_tram_df = pd.read_csv("data/TRAMMETRO_PUNTEN_2022.csv", sep=";")
 metro_df = metro_tram_df.loc[metro_tram_df["Modaliteit"] == "Metro"]
@@ -24,46 +34,43 @@ tram_df = metro_tram_df.loc[metro_tram_df["Modaliteit"] == "Tram"]
 
 metro_coordinates = [[row["LNG"], row["LAT"]] for _, row in metro_df.iterrows()]
 
-df_hubs_data = pd.DataFrame({"Mobility hub": hub_addresses})
 
+def get_origin_dest_matrix(
+    origins,
+    origins_batches,
+    destinations,
+    destinations_batches,
+    mode,
+):
+    origin_dest_matrix = pd.DataFrame()
 
-def find_nearest_from_destination_list(hub, destinations, mode):
-    nearest_destination = ""
-    distance_to_nearest = 999999999
-    for destination in destinations:
-        directions = gmaps.directions(hub, destination, mode=mode)
-        distance = directions[0]["legs"][0]["distance"]["value"]
-        if distance < distance_to_nearest:
-            distance_to_nearest = distance
-            nearest_destination = destination
-    return {"name": nearest_destination, "distance": distance_to_nearest}
+    for origin_batch in origins_batches:
+        # matrix for the origin batch and all their destinations
+        origin_batch_matrix = pd.DataFrame()
 
+        for destinations_batch in destinations_batches:
+            # 10x10 matrix for the origin batch and the destination batch
+            batch_batch_matrix = pd.DataFrame()
 
-nearest_stations = {
-    "walking": [
-        find_nearest_from_destination_list(hub, train_stations, "walking")
-        for hub in hub_addresses
-    ],
-    "biking": [
-        find_nearest_from_destination_list(hub, train_stations, "bicycling")
-        for hub in hub_addresses
-    ],
-}
+            gmaps_batch = gmaps.distance_matrix(
+                origin_batch, destinations_batch, mode=mode
+            )
 
-df_hubs_data["Nearest station (walking)"] = [
-    station["name"] for station in nearest_stations["walking"]
-]
-df_hubs_data["Distance to nearest train station (walking)"] = [
-    station["distance"] for station in nearest_stations["walking"]
-]
-df_hubs_data["Nearest station (biking)"] = [
-    station["name"] for station in nearest_stations["biking"]
-]
-df_hubs_data["Distance to nearest train station (biking)"] = [
-    station["distance"] for station in nearest_stations["biking"]
-]
+            for row in gmaps_batch["rows"]:
+                values = pd.Series(
+                    [element["distance"]["value"] for element in row["elements"]]
+                )
+                batch_batch_matrix = pd.concat([batch_batch_matrix, values], axis=1)
 
-df_hubs_data.to_csv("results/mobility_hub_google_maps_data.csv")
+            origin_batch_matrix = pd.concat([origin_batch_matrix, batch_batch_matrix])
+        origin_dest_matrix = pd.concat(
+            [origin_dest_matrix, origin_batch_matrix], axis=1
+        )
+
+    origin_dest_matrix.columns = origins
+    origin_dest_matrix.index = destinations
+    return origin_dest_matrix
+
 
 """
 The result should be dataset with each mobility hub per row and some new observations
