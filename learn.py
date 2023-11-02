@@ -18,5 +18,11 @@ df = pd.concat([df, df2], axis=1)
 df3 = pd.DataFrame()
 df3 = pd.concat([df3, df])
 df3 = pd.concat([df3, df])
-
-print(df3)
+df.columns = labels
+df.index = labels2
+print(df)
+for index, series in df.iterrows():
+    print(f"{series}, {index}, {series.nsmallest(1).index[0]}")
+    print(
+        f"The smallest element in the series {index} is {series.nsmallest(1).index[0]}, with a value of {series.nsmallest(1).iloc[0]}"
+    )
