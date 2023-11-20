@@ -1,0 +1,19 @@
+,mobility_hub,nearest_train_station_name_walking,nearest_train_station_distance_walking,nearest_metro_station_name_walking,nearest_metro_station_distance_walking,nearest_train_station_name_bicycling,nearest_train_station_distance_bicycling,nearest_metro_station_name_bicycling,nearest_metro_station_distance_bicycling
+0,Science Park 900 Amsterdam,Amsterdam Science Park Station,631,Amstelstation,3349,Amsterdam Science Park Station,716,Amstelstation,3456
+1,Carolina MacGillavrylaan 3066 Amsterdam,Amsterdam Science Park Station,282,Amstelstation,3000,Amsterdam Science Park Station,305,Amstelstation,3054
+2,Carolina MacGillavrylaan 1672 Amsterdam,Amsterdam Science Park Station,548,Amstelstation,2657,Amsterdam Science Park Station,571,Amstelstation,3320
+3,Johannes van der Waalstraat 81 Amsterdam,Amsterdam Science Park Station,506,Amstelstation,2207,Amsterdam Science Park Station,1086,Amstelstation,2216
+4,Max Planckstraat 29 Amsterdam,Amsterdam Science Park Station,255,Amstelstation,2510,Amsterdam Science Park Station,778,Amstelstation,2575
+5,Boelelaan 30 Amsterdam,Amsterdam RAI Station,489,Station RAI,489,Amsterdam Zuid Station,1359,Europaplein,992
+6,Boelelaan 769 Amsterdam,Amsterdam Zuid Station,472,Station Zuid,535,Amsterdam Zuid Station,725,Station Zuid,743
+7,Parnassusweg 126-128 Amsterdam,Amsterdam Zuid Station,608,Station Zuid,904,Amsterdam Zuid Station,624,Station Zuid,929
+8,Gerard Doustraat 13 Amsterdam,Amsterdam RAI Station,2310,Vijzelgracht,635,Amsterdam Zuid Station,2426,Vijzelgracht,870
+9,Daniel Stalperstraat 28 Amsterdam,Amsterdam RAI Station,2435,Vijzelgracht,592,Amsterdam RAI Station,2429,Vijzelgracht,750
+10,Quillijnstraat 39 Amsterdam,Amsterdam Centraal Station,1516,Waterlooplein,121,Amsterdam Centraal Station,1677,Waterlooplein,138
+11,Kattenburgstraat 5 Amsterdam,Amsterdam Centraal Station,1327,Centraal Station,1327,Amsterdam Centraal Station,1327,Centraal Station,1327
+12,Hoekenes 30 Amsterdam,Amsterdam Lelylaan Station,2624,Station Lelylaan,2624,Amsterdam Lelylaan Station,2945,Station Lelylaan,2822
+13,Chasséstraat 91 Amsterdam,Amsterdam Lelylaan Station,2929,Jan van Galenstraat,982,Amsterdam Sloterdijk Station,3166,Jan van Galenstraat,1005
+14,Maarten H. Trompstraat 25 Amsterdam,Amsterdam Sloterdijk Station,2826,Jan van Galenstraat,842,Amsterdam Sloterdijk Station,3004,Jan van Galenstraat,843
+15,Pieter van der Doesstraat 5I Amsterdam,Amsterdam Sloterdijk Station,2802,Jan van Galenstraat,546,Amsterdam Sloterdijk Station,3029,Jan van Galenstraat,734
+16,J.H. Hisgenpad 2 Amsterdam,Amsterdam Centraal Station,3656,Noord,732,Amsterdam Centraal Station,3689,Noord,1283
+17,Isolatorweg station Amsterdam,Amsterdam Sloterdijk Station,1618,Isolatorweg,0,Amsterdam Sloterdijk Station,2198,Isolatorweg,0

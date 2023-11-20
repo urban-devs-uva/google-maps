@@ -1,13 +1,13 @@
 import pandas as pd
 import data
-import data_func
+import distance_matrix
 
 df_hub_data = pd.DataFrame({"mobility_hub": data.hub_addresses})
+df_neighbourhood_data = pd.DataFrame({"neighbourhood": data.neighbourhood_labels})
 
 modes_of_interest = ["walking", "bicycling"]
-
 for mode in modes_of_interest:
-    df_hub_data = data_func.add_nearest_destination_to_hubs(
+    df_hub_data = distance_matrix.add_nearest_destination_to_origins_df(
         df_hub_data,
         data.train_stations,
         data.train_stations_batches,
@@ -16,9 +16,18 @@ for mode in modes_of_interest:
         mode,
     )
 
-    df_hub_data = data_func.add_nearest_destination_to_hubs()
+    df_hub_data = distance_matrix.add_nearest_destination_to_origins_df(
+        df_hub_data,
+        data.metro_labels,
+        data.metro_gmaps_ids_batches,
+        "nearest_metro_station_name",
+        "nearest_metro_station_distance",
+        mode,
+    )
 
-df_hub_data.to_csv("data.csv")
+
+df_hub_data.to_csv("hub_data.csv")
+df_neighbourhood_data.to_csv("neighbourhood_data.csv")
 
 """
 The result should be dataset with each mobility hub per row and some new observations

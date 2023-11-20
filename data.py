@@ -17,7 +17,8 @@ def batch_for_gmaps(data):
 hub_addresses = []
 with open("data/mobility_hub_addresses.txt") as file:
     lines = file.readlines()
-    hub_addresses = [f'{line.replace("\n", "")} Amsterdam' for line in lines]
+    hub_addresses = [line.replace("\n", "") + " Amsterdam" for line in lines]
+
 hubs_batches = batch_for_gmaps(hub_addresses)
 
 
@@ -32,4 +33,16 @@ metro_tram_df = pd.read_csv("data/TRAMMETRO_PUNTEN_2022.csv", sep=";")
 metro_df = metro_tram_df.loc[metro_tram_df["Modaliteit"] == "Metro"]
 tram_df = metro_tram_df.loc[metro_tram_df["Modaliteit"] == "Tram"]
 
-metro_coordinates = [[row["LNG"], row["LAT"]] for _, row in metro_df.iterrows()]
+metro_labels = [row["Naam"] for _, row in metro_df.iterrows()]
+metro_gmaps_ids = [label + " amsterdam metro station" for label in metro_labels]
+metro_gmaps_ids_batches = batch_for_gmaps(metro_gmaps_ids)
+
+shared_mobility_ams_df = pd.read_csv(
+    "data/rapportage_2020-09-01-2023-09-30_GM0363 - donkey.csv"
+)
+
+# get all the neighbourhood rows from this data
+neighbourhoods_df = shared_mobility_ams_df.iloc[5:104]
+neighbourhoods_df.set_index("neighbourhood", inplace=True, drop=True)
+neighbourhood_labels = list(neighbourhoods_df.index.values)
+neighbourhood_batches = batch_for_gmaps(neighbourhood_labels)
