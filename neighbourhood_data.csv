@@ -1,100 +1,100 @@
-,neighbourhood
-0,Amstel III/Bullewijk
-1,Apollobuurt
-2,Banne Buiksloot
-3,Bedrijventerrein Sloterdijk
-4,Betondorp
-5,"Bijlmer Centrum (D,F,H)"
-6,"Bijlmer Oost (E,G,K)"
-7,Buikslotermeer
-8,Buitenveldert-Oost
-9,Buitenveldert-West
-10,Burgwallen-Nieuwe Zijde
-11,Burgwallen-Oude Zijde
-12,Centrale Markt
-13,Chassébuurt
-14,Da Costabuurt
-15,Dapperbuurt
-16,De Kolenkit
-17,De Punt
-18,De Weteringschans
-19,Driemond
-20,Eendracht
-21,Elzenhagen
-22,Erasmuspark
-23,Frankendael
-24,Frederik Hendrikbuurt
-25,Gein
-26,Geuzenbuurt
-27,Geuzenveld
-28,Grachtengordel-West
-29,Grachtengordel-Zuid
-30,Haarlemmerbuurt
-31,Helmersbuurt
-32,Holendrecht/Reigersbos
-33,Hoofddorppleinbuurt
-34,Hoofdweg e.o.
-35,Houthavens
-36,IJburg Oost
-37,IJburg West
-38,IJburg Zuid
-39,IJplein/Vogelbuurt
-40,IJselbuurt
-41,Indische Buurt Oost
-42,Indische Buurt West
-43,Jordaan
-44,Kadoelen
-45,Kinkerbuurt
-46,Landlust
-47,Lutkemeer/Ookmeer
-48,Middelveldsche Akerpolder
-49,Middenmeer
-50,Museumkwartier
-51,Nellestein
-52,Nieuwe Pijp
-53,Nieuwendammerdijk/Buiksloterdijk
-54,Nieuwmarkt/Lastage
-55,Noordelijke IJ-oevers Oost
-56,Noordelijke IJ-oevers West
-57,Omval/Overamstel
-58,Oostelijk Havengebied
-59,Oostelijke Eilanden/Kadijken
-60,Oosterparkbuurt
-61,Oostzanerwerf
-62,Osdorp-Midden
-63,Osdorp-Oost
-64,Oude Pijp
-65,Overtoomse Sluis
-66,Overtoomse Veld
-67,Prinses Irenebuurt e.o.
-68,Rijnbuurt
-69,Scheldebuurt
-70,Schinkelbuurt
-71,Sloter-/Riekerpolder
-72,Sloterdijk
-73,Slotermeer-Noordoost
-74,Slotermeer-Zuidwest
-75,Slotervaart Noord
-76,Slotervaart Zuid
-77,Spaarndammer- en Zeeheldenbuurt
-78,Staatsliedenbuurt
-79,Stadionbuurt
-80,Transvaalbuurt
-81,Tuindorp Buiksloot
-82,Tuindorp Nieuwendam
-83,Tuindorp Oostzaan
-84,Van Galenbuurt
-85,Van Lennepbuurt
-86,Volewijck
-87,Vondelbuurt
-88,Waterland
-89,Waterlandpleinbuurt
-90,Weesperbuurt/Plantage
-91,Weesperzijde
-92,Westelijk Havengebied
-93,Westindische Buurt
-94,Westlandgracht
-95,Willemspark
-96,Zeeburgereiland/Nieuwe Diep
-97,Zuid Pijp
-98,Zuidas
+,neighbourhood,nearest_train_station_name_walking,nearest_train_station_distance_walking,nearest_metro_station_name_walking,nearest_metro_station_distance_walking,nearest_train_station_name_bicycling,nearest_train_station_distance_bicycling,nearest_metro_station_name_bicycling,nearest_metro_station_distance_bicycling
+0,Amstel III/Bullewijk Amsterdam,Amsterdam Holendrecht Station,719,Station Holendrecht,719,Amsterdam Holendrecht Station,1147,Station Holendrecht,1147
+1,Apollobuurt Amsterdam,Amsterdam Zuid Station,1134,Station Zuid,1209,Amsterdam Zuid Station,1029,Station Zuid,1343
+2,Banne Buiksloot Amsterdam,Amsterdam Centraal Station,3906,Noorderpark,1436,Amsterdam Centraal Station,4670,Noorderpark,1633
+3,Bedrijventerrein Sloterdijk Amsterdam,Amsterdam Sloterdijk Station,5542,Burg. De Vlugtlaan,4873,Amsterdam Sloterdijk Station,4951,Station Sloterdijk,4532
+4,Betondorp Amsterdam,Amsterdam Science Park Station,1839,Station Diemen-Zuid,1729,Amsterdam Science Park Station,2373,Van der Madeweg,2357
+5,"Bijlmer Centrum (D,F,H) Amsterdam",Amsterdam Bijlmer ArenA Station,615,Station Bijlmer ArenA,615,Amsterdam Bijlmer ArenA Station,787,Station Bijlmer ArenA,787
+6,"Bijlmer Oost (E,G,K) Amsterdam",Amsterdam Bijlmer ArenA Station,2362,Kraaiennest station,429,Amsterdam Bijlmer ArenA Station,2579,Station Ganzenhoef,701
+7,Buikslotermeer Amsterdam,Amsterdam Centraal Station,4360,Noord,1040,Amsterdam Centraal Station,4577,Noord,1355
+8,Buitenveldert-Oost Amsterdam,Amsterdam RAI Station,861,Station RAI,861,Amsterdam Zuid Station,1528,Europaplein,1364
+9,Buitenveldert-West Amsterdam,Amsterdam Zuid Station,960,Station Zuid,1242,Amsterdam Zuid Station,864,Station Zuid,1292
+10,Burgwallen-Nieuwe Zijde Amsterdam,Amsterdam Centraal Station,1139,Rokin,343,Amsterdam Centraal Station,1333,Rokin,751
+11,Burgwallen-Oude Zijde Amsterdam,Amsterdam Centraal Station,588,Nieuwmarkt,479,Amsterdam Centraal Station,634,Nieuwmarkt,478
+12,Centrale Markt Amsterdam,Amsterdam Centraal Station,3132,Jan van Galenstraat,1552,Amsterdam Centraal Station,4149,Jan van Galenstraat,1953
+13,Chassébuurt Amsterdam,Amsterdam Lelylaan Station,2557,Postjesweg,1184,Amsterdam Lelylaan Station,3095,Postjesweg,1184
+14,Da Costabuurt Amsterdam,Amsterdam Centraal Station,2509,Rokin,1633,Amsterdam Centraal Station,2524,Rokin,1729
+15,Dapperbuurt Amsterdam,Amsterdam Muiderpoort Station,419,Weesperplein,1699,Amsterdam Muiderpoort Station,426,Wibautstraat,1855
+16,De Kolenkit Amsterdam,Amsterdam Sloterdijk Station,1393,Burg. De Vlugtlaan,262,Amsterdam Sloterdijk Station,2001,Burg. De Vlugtlaan,260
+17,De Punt Amsterdam,Amsterdam Lelylaan Station,3899,Station Lelylaan,3804,Amsterdam Lelylaan Station,4171,Station Lelylaan,3943
+18,De Weteringschans Amsterdam,Amsterdam Centraal Station,2287,Vijzelgracht,124,Amsterdam Centraal Station,2311,Vijzelgracht,258
+19,Driemond Amsterdam,Amsterdam Holendrecht Station,5249,Gaasperplas,2828,Amsterdam Holendrecht Station,5432,Gaasperplas,2882
+20,Eendracht Amsterdam,Amsterdam Sloterdijk Station,4995,Burg. De Vlugtlaan,4326,Amsterdam Sloterdijk Station,4778,Burg. De Vlugtlaan,4328
+21,Elzenhagen Amsterdam,Amsterdam Centraal Station,3983,Noord,1022,Amsterdam Centraal Station,4057,Noord,1615
+22,Erasmuspark Amsterdam,Amsterdam Sloterdijk Station,2333,Jan van Galenstraat,198,Amsterdam Lelylaan Station,3388,Jan van Galenstraat,503
+23,Frankendael Amsterdam,Amsterdam Muiderpoort Station,1586,Amstelstation,647,Amsterdam Muiderpoort Station,1895,Amstelstation,723
+24,Frederik Hendrikbuurt Amsterdam,Amsterdam Centraal Station,2395,Jan van Galenstraat,1591,Amsterdam Centraal Station,3041,Jan van Galenstraat,1607
+25,Gein Amsterdam,Amsterdam Holendrecht Station,2632,Gein,0,Amsterdam Holendrecht Station,2717,Gein,0
+26,Geuzenbuurt Amsterdam,Amsterdam Centraal Station,1516,Waterlooplein,121,Amsterdam Centraal Station,1677,Waterlooplein,138
+27,Geuzenveld Amsterdam,Amsterdam Sloterdijk Station,3561,Burg. De Vlugtlaan,2891,Amsterdam Sloterdijk Station,3643,Burg. De Vlugtlaan,2886
+28,Grachtengordel-West Amsterdam,Amsterdam Centraal Station,1131,Centraal Station,1131,Amsterdam Centraal Station,1342,Centraal Station,1342
+29,Grachtengordel-Zuid Amsterdam,Amsterdam Centraal Station,1675,Rokin,509,Amsterdam Centraal Station,2143,Rokin,509
+30,Haarlemmerbuurt Amsterdam,Amsterdam Centraal Station,1301,Centraal Station,1301,Amsterdam Centraal Station,1397,Centraal Station,1397
+31,Helmersbuurt Amsterdam,Amsterdam Centraal Station,3147,Vijzelgracht,1697,Amsterdam Zuid Station,3318,Vijzelgracht,1983
+32,Holendrecht/Reigersbos Amsterdam,Amsterdam Holendrecht Station,1480,Reigersbos,74,Amsterdam Holendrecht Station,1624,Reigersbos,0
+33,Hoofddorppleinbuurt Amsterdam,Amsterdam Lelylaan Station,1818,Heemstedestraat,1204,Amsterdam Lelylaan Station,2069,Heemstedestraat,1126
+34,Hoofdweg e.o. Amsterdam,Amsterdam Lelylaan Station,2245,Jan van Galenstraat,718,Amsterdam Lelylaan Station,2250,Postjesweg,1054
+35,Houthavens Amsterdam,Amsterdam Centraal Station,2366,Centraal Station,2366,Amsterdam Centraal Station,2317,Centraal Station,2317
+36,IJburg Oost Amsterdam,Amsterdam Science Park Station,4249,Station Diemen-Zuid,5990,Amsterdam Science Park Station,4365,Verrijn Stuartweg,6286
+37,IJburg West Amsterdam,Amsterdam Science Park Station,3678,Station Diemen-Zuid,5419,Amsterdam Science Park Station,3793,Verrijn Stuartweg,5715
+38,IJburg Zuid Amsterdam,Amsterdam Science Park Station,4932,Station Ganzenhoef,6086,Amsterdam Science Park Station,5148,Verrijn Stuartweg,6741
+39,IJplein/Vogelbuurt Amsterdam,Amsterdam Centraal Station,1476,Centraal Station,1476,Amsterdam Centraal Station,1407,Centraal Station,1407
+40,IJselbuurt Amsterdam,Amsterdam Centraal Station,1516,Waterlooplein,121,Amsterdam Centraal Station,1677,Waterlooplein,138
+41,Indische Buurt Oost Amsterdam,Amsterdam Muiderpoort Station,772,Weesperplein,2479,Amsterdam Muiderpoort Station,759,Wibautstraat,2700
+42,Indische Buurt West Amsterdam,Amsterdam Muiderpoort Station,534,Weesperplein,2218,Amsterdam Muiderpoort Station,534,Weesperplein,2385
+43,Jordaan Amsterdam,Amsterdam Centraal Station,1719,Rokin,1244,Amsterdam Centraal Station,1780,Rokin,1531
+44,Kadoelen Amsterdam,Amsterdam Centraal Station,5826,Noorderpark,3573,Amsterdam Centraal Station,6475,Noorderpark,3647
+45,Kinkerbuurt Amsterdam,Amsterdam Lelylaan Station,2852,Postjesweg,1416,Amsterdam Lelylaan Station,2983,Postjesweg,1416
+46,Landlust Amsterdam,Amsterdam Sloterdijk Station,1770,Jan van Galenstraat,1271,Amsterdam Sloterdijk Station,1948,Station Sloterdijk,1685
+47,Lutkemeer/Ookmeer Amsterdam,Amsterdam Lelylaan Station,6902,Station Lelylaan,6806,Amsterdam Lelylaan Station,6631,Station Lelylaan,6616
+48,Middelveldsche Akerpolder Amsterdam,Amsterdam Lelylaan Station,3706,Heemstedestraat,3628,Amsterdam Lelylaan Station,3826,Station Lelylaan,3826
+49,Middenmeer Amsterdam,Amsterdam Science Park Station,376,Amstelstation,2697,Amsterdam Science Park Station,913,Amstelstation,2699
+50,Museumkwartier Amsterdam,Amsterdam Zuid Station,2093,Vijzelgracht,1299,Amsterdam Zuid Station,2599,De Pijp,1966
+51,Nellestein Amsterdam,Amsterdam Holendrecht Station,2823,Gaasperplas,0,Amsterdam Holendrecht Station,2956,Gaasperplas,0
+52,Nieuwe Pijp Amsterdam,Amsterdam RAI Station,2141,De Pijp,340,Amsterdam RAI Station,2138,De Pijp,346
+53,Nieuwendammerdijk/Buiksloterdijk Amsterdam,Amsterdam Centraal Station,4194,Noord,1365,Amsterdam Centraal Station,4170,Noord,1602
+54,Nieuwmarkt/Lastage Amsterdam,Amsterdam Centraal Station,786,Nieuwmarkt,98,Amsterdam Centraal Station,1131,Nieuwmarkt,98
+55,Noordelijke IJ-oevers Oost Amsterdam,Amsterdam Centraal Station,1573,Centraal Station,1573,Amsterdam Centraal Station,1467,Centraal Station,1467
+56,Noordelijke IJ-oevers West Amsterdam,Amsterdam Centraal Station,1573,Centraal Station,1573,Amsterdam Centraal Station,1467,Centraal Station,1467
+57,Omval/Overamstel Amsterdam,Amsterdam Duivendrecht Station,2804,Spaklerweg,175,Amsterdam Duivendrecht Station,2736,Spaklerweg,175
+58,Oostelijk Havengebied Amsterdam,Amsterdam Muiderpoort Station,1821,Weesperplein,2707,Amsterdam Muiderpoort Station,1903,Centraal Station,2875
+59,Oostelijke Eilanden/Kadijken Amsterdam,Amsterdam Muiderpoort Station,1470,Waterlooplein,1008,Amsterdam Muiderpoort Station,1567,Waterlooplein,1089
+60,Oosterparkbuurt Amsterdam,Amsterdam Muiderpoort Station,1047,Wibautstraat,897,Amsterdam Muiderpoort Station,1275,Wibautstraat,1042
+61,Oostzanerwerf Amsterdam,Amsterdam Centraal Station,5846,Noorderpark,4467,Amsterdam Centraal Station,7724,Noorderpark,4788
+62,Osdorp-Midden Amsterdam,Amsterdam Lelylaan Station,3074,Station Lelylaan,2979,Amsterdam Lelylaan Station,3313,Station Lelylaan,3295
+63,Osdorp-Oost Amsterdam,Amsterdam Lelylaan Station,2722,Station Lelylaan,2626,Amsterdam Lelylaan Station,2891,Station Lelylaan,2876
+64,Oude Pijp Amsterdam,Amsterdam RAI Station,2127,Vijzelgracht,605,Amsterdam RAI Station,2162,Vijzelgracht,764
+65,Overtoomse Sluis Amsterdam,Amsterdam Lelylaan Station,1934,Postjesweg,1491,Amsterdam Lelylaan Station,1939,Postjesweg,1492
+66,Overtoomse Veld Amsterdam,Amsterdam Lelylaan Station,1077,Postjesweg,416,Amsterdam Lelylaan Station,1107,Postjesweg,1087
+67,Prinses Irenebuurt e.o. Amsterdam,Amsterdam Zuid Station,358,Station Zuid,587,Amsterdam Zuid Station,342,Station Zuid,635
+68,Rijnbuurt Amsterdam,Amsterdam RAI Station,1402,Europaplein,1162,Amsterdam RAI Station,1394,Europaplein,1019
+69,Scheldebuurt Amsterdam,Amsterdam RAI Station,778,Europaplein,248,Amsterdam RAI Station,787,Europaplein,335
+70,Schinkelbuurt Amsterdam,Amsterdam Zuid Station,2008,Amstelveenseweg,1479,Amsterdam Zuid Station,2359,Amstelveenseweg,1580
+71,Sloter-/Riekerpolder Amsterdam,Amsterdam Lelylaan Station,2523,Henk Sneevlietweg,1345,Amsterdam Lelylaan Station,3088,Henk Sneevlietweg,1993
+72,Sloterdijk Amsterdam,Amsterdam Sloterdijk Station,875,Station Sloterdijk,869,Amsterdam Sloterdijk Station,1056,Station Sloterdijk,1082
+73,Slotermeer-Noordoost Amsterdam,Amsterdam Sloterdijk Station,1346,Burg. De Vlugtlaan,770,Amsterdam Sloterdijk Station,1447,Burg. De Vlugtlaan,810
+74,Slotermeer-Zuidwest Amsterdam,Amsterdam Sloterdijk Station,2745,Burg. De Vlugtlaan,1961,Amsterdam Sloterdijk Station,3088,Burg. De Vlugtlaan,2291
+75,Slotervaart Noord Amsterdam,Amsterdam Lelylaan Station,611,Noord,0,Amsterdam Sloterdijk Station,4203,Station Lelylaan,614
+76,Slotervaart Zuid Amsterdam,Amsterdam Lelylaan Station,574,Station Lelylaan,611,Amsterdam Lelylaan Station,614,Station Lelylaan,614
+77,Spaarndammer- en Zeeheldenbuurt Amsterdam,Amsterdam Centraal Station,2465,Isolatorweg,2229,Amsterdam Centraal Station,2499,Centraal Station,2499
+78,Staatsliedenbuurt Amsterdam,Amsterdam Centraal Station,2406,Jan van Galenstraat,2102,Amsterdam Centraal Station,2569,Jan van Galenstraat,2104
+79,Stadionbuurt Amsterdam,Amsterdam Zuid Station,1380,Amstelveenseweg,853,Amsterdam Zuid Station,1766,Amstelveenseweg,944
+80,Transvaalbuurt Amsterdam,Amsterdam Muiderpoort Station,1515,Wibautstraat,412,Amsterdam Muiderpoort Station,1863,Wibautstraat,412
+81,Tuindorp Buiksloot Amsterdam,Amsterdam Centraal Station,3226,Noord,449,Amsterdam Centraal Station,3149,Noorderpark,1149
+82,Tuindorp Nieuwendam Amsterdam,Amsterdam Centraal Station,4385,Noord,1357,Amsterdam Centraal Station,5159,Noord,1800
+83,Tuindorp Oostzaan Amsterdam,Amsterdam Centraal Station,4379,Noorderpark,3249,Amsterdam Centraal Station,5187,Noorderpark,4078
+84,Van Galenbuurt Amsterdam,Amsterdam Sloterdijk Station,2381,Jan van Galenstraat,386,Amsterdam Sloterdijk Station,3230,Jan van Galenstraat,1145
+85,Van Lennepbuurt Amsterdam,Amsterdam Centraal Station,2813,Postjesweg,1732,Amsterdam Centraal Station,3243,Postjesweg,1738
+86,Volewijck Amsterdam,Amsterdam Centraal Station,2540,Noorderpark,386,Amsterdam Centraal Station,3494,Noorderpark,389
+87,Vondelbuurt Amsterdam,Amsterdam Zuid Station,2810,Vijzelgracht,1417,Amsterdam Lelylaan Station,3098,Vijzelgracht,1613
+88,Waterland Amsterdam,Amsterdam Centraal Station,8200,Noord,5311,Amsterdam Muiderpoort Station,6837,Noord,5520
+89,Waterlandpleinbuurt Amsterdam,Amsterdam Centraal Station,5306,Noord,2147,Amsterdam Centraal Station,5861,Noord,2503
+90,Weesperbuurt/Plantage Amsterdam,Amsterdam Muiderpoort Station,2010,Weesperplein,510,Amsterdam Muiderpoort Station,2058,Waterlooplein,734
+91,Weesperzijde Amsterdam,Amsterdam Muiderpoort Station,1863,Wibautstraat,329,Amsterdam Muiderpoort Station,2099,Wibautstraat,445
+92,Westelijk Havengebied Amsterdam,Amsterdam Muiderpoort Station,1863,Wibautstraat,329,Amsterdam Sloterdijk Station,5834,Station Sloterdijk,5416
+93,Westindische Buurt Amsterdam,Amsterdam Lelylaan Station,1568,Postjesweg,660,Amsterdam Lelylaan Station,1821,Postjesweg,1031
+94,Westlandgracht Amsterdam,Amsterdam Lelylaan Station,1320,Henk Sneevlietweg,618,Amsterdam Lelylaan Station,1655,Henk Sneevlietweg,628
+95,Willemspark Amsterdam,Amsterdam Lelylaan Station,2154,Amstelveenseweg,1895,Amsterdam Lelylaan Station,2646,Amstelveenseweg,1977
+96,Zeeburgereiland/Nieuwe Diep Amsterdam,Amsterdam Science Park Station,1882,Wibautstraat,4059,Amsterdam Science Park Station,1905,Weesperplein,4194
+97,Zuid Pijp Amsterdam,Amsterdam RAI Station,2445,De Pijp,0,Amsterdam Muiderpoort Station,2516,De Pijp,0
+98,Zuidas Amsterdam,Amsterdam Zuid Station,49,Station Zuid,112,Amsterdam Zuid Station,41,Station Zuid,112

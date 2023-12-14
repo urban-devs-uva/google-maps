@@ -44,5 +44,7 @@ shared_mobility_ams_df = pd.read_csv(
 # get all the neighbourhood rows from this data
 neighbourhoods_df = shared_mobility_ams_df.iloc[5:104]
 neighbourhoods_df.set_index("neighbourhood", inplace=True, drop=True)
-neighbourhood_labels = list(neighbourhoods_df.index.values)
+neighbourhood_labels = [
+    label + " Amsterdam" for label in list(neighbourhoods_df.index.values)
+]
 neighbourhood_batches = batch_for_gmaps(neighbourhood_labels)

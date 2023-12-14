@@ -25,15 +25,13 @@ def get_origin_dest_matrix(
             gmaps_batch = gmaps.distance_matrix(
                 origin_batch, destinations_batch, mode=mode
             )
-            print(gmaps_batch["destination_addresses"])
+            print(gmaps_batch["origin_addresses"])
             for row in gmaps_batch["rows"]:
                 try:
                     values = pd.Series(
                         [element["distance"]["value"] for element in row["elements"]]
                     )
-                    print(gmaps_batch["rows"].index(row))
                 except:
-                    print("index of row: ")
                     print(gmaps_batch["rows"].index(row))
 
                 batch_batch_matrix = pd.concat([batch_batch_matrix, values], axis=1)
@@ -62,11 +60,15 @@ def get_nearest_destinations(distance_matrix: pd.DataFrame, name_col, distance_c
 
 
 def add_nearest_destination_to_origins_df(
-    df, destinations, destinations_batches, name_col: str, distance_col: str, mode: str
+    df,
+    origins,
+    origins_batches,
+    destinations,
+    destinations_batches,
+    name_col: str,
+    distance_col: str,
+    mode: str,
 ):
-    origins = data.hub_addresses
-    origins_batches = data.hubs_batches
-
     origin_dest_matrix = get_origin_dest_matrix(
         origins, origins_batches, destinations, destinations_batches, mode
     )

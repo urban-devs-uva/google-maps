@@ -20,9 +20,6 @@ df3 = pd.concat([df3, df])
 df3 = pd.concat([df3, df])
 df.columns = labels
 df.index = labels2
-print(df)
-for index, series in df.iterrows():
-    print(f"{series}, {index}, {series.nsmallest(1).index[0]}")
-    print(
-        f"The smallest element in the series {index} is {series.nsmallest(1).index[0]}, with a value of {series.nsmallest(1).iloc[0]}"
-    )
+
+
+df_neigh = pd.read_csv("neighbourhood_data.csv")
